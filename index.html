@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather widget</title>
+  </head>
+  <body>
+    <div class="weather-container">
+      <div class="row row-cols-1 row-cols-md-5">
+        <div class="col">
+          <!-- Todays weather -->
+          <div class="card">
+            <div class="location">
+              <h3 class="city">city</h3>
+              <div class="date">date</div>
+            </div>
+            <div class="temperature-container">
+              <div id="today-temp" class="row row-cols-2 row-cols-md-2">
+                <div class="col">
+                  <img class="icon" src="" />
+                </div>
+                <div class="col">
+                  <h1 class="feel">temp</h1>
+                </div>
+                <div id="hi-lo" class="col">
+                  <h6 class="feel-high">High/low</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div id="extra-info">
+                  <div class="description">desc</div>
+                  <div class="humidity">humidity</div>
+                  <div class="precipitation">precipitation</div>
+                  <div class="windspeed">windspeed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- tomorrows weather -->
+          <div class="card smaller">
+            <div class="date2">date</div>
+            <div class="temperature-container">
+              <div id="today-temp" class="row row-cols-2 row-cols-md-2">
+                <div class="col">
+                  <img class="icon2" src="" />
+                </div>
+                <div class="col">
+                  <h1 class="feel2">temp</h1>
+                </div>
+                <div id="hi-lo" class="col">
+                  <h6 class="feel-high2">High/low</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div id="extra-info">
+                  <div class="description2">desc</div>
+                  <div class="humidity2">humidity</div>
+                  <div class="precipitation2">precipitation</div>
+                  <div class="windspeed2">windspeed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- day3 weather -->
+          <div class="card smaller">
+            <div class="date3">date</div>
+            <div class="temperature-container">
+              <div id="today-temp" class="row row-cols-2 row-cols-md-2">
+                <div class="col">
+                  <img class="icon3" src="" />
+                </div>
+                <div class="col">
+                  <h1 class="feel3">temp</h1>
+                </div>
+                <div id="hi-lo" class="col">
+                  <h6 class="feel-high3">High/low</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div id="extra-info">
+                  <div class="description3">desc</div>
+                  <div class="humidity3">humidity</div>
+                  <div class="precipitation3">precipitation</div>
+                  <div class="windspeed3">windspeed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- day4 weather -->
+          <div class="card smaller">
+            <div class="date4">date</div>  
+            <div class="temperature-container">
+                <div id="today-temp" class="row row-cols-2 row-cols-md-2">
+                    <div class="col">
+                        <img class="icon4" src="" />
+                    </div>
+                    <div class="col">
+                        <h1 class="feel4">temp</h1>
+                    </div>
+                    <div id="hi-lo" class="col">
+                        <h6 class="feel-high4">High/low</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="extra-info">
+                        <div class="description4">desc</div>
+                        <div class="humidity4">humidity</div>
+                        <div class="precipitation4">precipitation</div>
+                        <div class="windspeed4">windspeed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+          <!-- day5 weather -->
+          <div class="card smaller">
+            <div class="date5">date</div>  
+            <div class="temperature-container">
+                <div id="today-temp" class="row row-cols-2 row-cols-md-2">
+                    <div class="col">
+                        <img class="icon5" src="" />
+                    </div>
+                    <div class="col">
+                        <h1 class="feel5">temp</h1>
+                    </div>
+                    <div id="hi-lo" class="col">
+                        <h6 class="feel-high5">High/low</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="extra-info">
+                        <div class="description5">desc</div>
+                        <div class="humidity5">humidity</div>
+                        <div class="precipitation5">precipitation</div>
+                        <div class="windspeed5">windspeed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="App.js"></script>
+  </body>
+</html>
