@@ -20,13 +20,13 @@
               >
                 <div class="row">
                   <div class="col-sm-4">
-                    <h6 class="card-title">Precip {{queriedCity[0].pop * 100}}%</h6>
+                    <h6 class="card-title"><span class="card-value">{{queriedCity[0].pop * 100}}%</span> Precipitation</h6>
                   </div>
                   <div class="col-sm-4">
-                    <h6 class="card-title">Humidity {{queriedCity[0].humidity}}%</h6>
+                    <h6 class="card-title"><span class="card-value">{{queriedCity[0].humidity}}%</span> Humidity</h6>
                   </div>
                   <div class="col-sm-4">
-                    <h6 class="card-title">Winds {{Math.round(queriedCity[0].wind_speed * 3.6)}}km/h {{position}}</h6>
+                    <h6 class="card-title"><span class="card-value">{{position}} {{Math.round(queriedCity[0].wind_speed * 3.6)}}KM/H</span> Winds</h6>
                   </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[1].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[1].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[1].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[1].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -66,8 +66,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[2].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[2].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[2].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[2].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -85,8 +85,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[3].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[3].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[3].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[3].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -104,8 +104,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[4].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[4].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[4].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[4].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -123,8 +123,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[5].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[5].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[5].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[5].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -142,8 +142,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[6].temp.max)}} ℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[6].temp.min)}} ℃</h6>
+            <h5 class="card-title">{{Math.round(queriedCity[6].temp.max)}}℃</h5>
+            <h6 class="card-title">{{Math.round(queriedCity[6].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -290,6 +290,11 @@ h3 {
 
 .weather-desc{
   text-transform: capitalize
+}
+
+.card-value{
+  color: lightblue;
+  font-style: italic
 }
 
 </style>
