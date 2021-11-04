@@ -7,12 +7,12 @@
         <div class="card weather-card">
           <div class="row">
             <div class="col-sm-6">
-              Present day {{queriedCity[0].weather[0].description}}
-              <h2 class="card-title">{{Math.round(searchQuery.list[0].main.temp)}}℃</h2>
-              <h5 class="card-title">Hi / Lo: {{Math.round(queriedCity[0].temp.max)}}℃ / {{Math.round(queriedCity[0].temp.min)}}℃</h5>
+              Present day
+              <h1 class="card-title main-temp">{{Math.round(searchQuery.list[0].main.temp)}}℃</h1>
+              <h5 class="card-title"><span class="hi-temp">{{Math.round(queriedCity[0].temp.max)}}℃</span> / <span class="lo-temp">{{Math.round(queriedCity[0].temp.min)}}℃</span></h5>
             </div>
             <div class="col-sm-6">
-              <h5 class="card-title">{{queriedCity[0].weather[0].description}}</h5>
+              <h5 class="card-title weather-desc">{{queriedCity[0].weather[0].description}}</h5>
               <img
                 :src='"http://openweathermap.org/img/wn/" + queriedCity[0].weather[0].icon + ".png"'
                 class="card-img img-fluid weather-img"
@@ -20,13 +20,13 @@
               >
                 <div class="row">
                   <div class="col-sm-4">
-                    <h6 class="card-title">Precipitation: {{queriedCity[0].pop * 100}}%</h6>
+                    <h6 class="card-title">Precip {{queriedCity[0].pop * 100}}%</h6>
                   </div>
                   <div class="col-sm-4">
-                    <h6 class="card-title">Humidity: {{queriedCity[0].humidity}}%</h6>
+                    <h6 class="card-title">Humidity {{queriedCity[0].humidity}}%</h6>
                   </div>
                   <div class="col-sm-4">
-                    <h6 class="card-title">Winds: {{Math.round(queriedCity[0].wind_speed * 3.6)}}km/h {{position}}</h6>
+                    <h6 class="card-title">Winds {{Math.round(queriedCity[0].wind_speed * 3.6)}}km/h {{position}}</h6>
                   </div>
                 </div>
             </div>
@@ -253,6 +253,7 @@ h3 {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 5px;
 }
 
 .weather-card .card-body {
@@ -272,4 +273,23 @@ h3 {
   width: 180px;
   height: 180px;
 }
+
+.main-temp{
+  font-size: 120px;
+}
+
+.hi-temp{
+  font-size: 30px;
+  color: rgba(255, 0, 0,0.8);
+}
+
+.lo-temp{
+  font-size: 24px;
+  color: rgba(0, 0, 255,0.8);
+}
+
+.weather-desc{
+  text-transform: capitalize
+}
+
 </style>
