@@ -7,7 +7,7 @@
         <div class="card weather-card">
           <div class="row">
             <div class="col-sm-6">
-              Present day
+              {{today}}
               <h1 class="card-title main-temp">{{Math.round(searchQuery.list[0].main.temp)}}℃</h1>
               <h5 class="card-title"><span class="hi-temp">{{Math.round(queriedCity[0].temp.max)}}℃</span> / <span class="lo-temp">{{Math.round(queriedCity[0].temp.min)}}℃</span></h5>
             </div>
@@ -26,7 +26,7 @@
                     <h6 class="card-title"><span class="card-value">{{queriedCity[0].humidity}}%</span> Humidity</h6>
                   </div>
                   <div class="col-sm-4">
-                    <h6 class="card-title"><span class="card-value">{{position}} {{Math.round(queriedCity[0].wind_speed * 3.6)}}KM/H</span> Winds</h6>
+                    <h6 class="card-title"><span class="card-value">{{Math.round(queriedCity[0].wind_speed * 3.6)}}KM/H {{position}}</span> Winds</h6>
                   </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">Tomorrow </h5>
+            <h5 class="card-title">{{tomorrow}} </h5>
             <h6 class="card-title">{{queriedCity[1].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -47,15 +47,15 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[1].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[1].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[1].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[1].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">Day After</h5>
+            <h5 class="card-title">{{two_days}}</h5>
             <h6 class="card-title">{{queriedCity[2].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -66,15 +66,15 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[2].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[2].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[2].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[2].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">2 Days After </h5>
+            <h5 class="card-title">{{three_days}} </h5>
             <h6 class="card-title">{{queriedCity[3].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -85,15 +85,15 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[3].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[3].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[3].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[3].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">3 Days After </h5>
+            <h5 class="card-title">{{four_days}}</h5>
             <h6 class="card-title">{{queriedCity[4].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -104,15 +104,15 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[4].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[4].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[4].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[4].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">4 Days After </h5>
+            <h5 class="card-title">{{five_days}}</h5>
             <h6 class="card-title">{{queriedCity[5].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -123,15 +123,15 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[5].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[5].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[5].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[5].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-6 col-md-6 col-lg-2">
         <div class="card weather-card">
           <div class="card-header">
-            <h5 class="card-title">5 Days After </h5>
+            <h5 class="card-title">{{six_days}}</h5>
             <h6 class="card-title">{{queriedCity[6].weather[0].description}}</h6>
           </div>
           <div class="card-body">
@@ -142,8 +142,8 @@
             >
           </div>
           <div class="card-footer">
-            <h5 class="card-title">{{Math.round(queriedCity[6].temp.max)}}℃</h5>
-            <h6 class="card-title">{{Math.round(queriedCity[6].temp.min)}}℃</h6>
+            <h5 class="footer-hi-temp">{{Math.round(queriedCity[6].temp.max)}}℃</h5>
+            <h6 class="footer-lo-temp">{{Math.round(queriedCity[6].temp.min)}}℃</h6>
           </div>
         </div>
       </div>
@@ -153,6 +153,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   name: "Widget",
   props: {},
@@ -160,7 +162,9 @@ export default {
     return {
       searchQuery: [""],
       queriedCity: [""],
-      position: "",
+      position: null,
+      today: null,
+      tomorrow: null
     };
   },
   created() {
@@ -178,7 +182,6 @@ export default {
       // windspeed /
       // Weather icons /
       // next 5 days weather forecast : high and lows and icons
-
       fetch(
         "http://api.openweathermap.org/data/2.5/forecast?q=Cape Town&units=metric&APPID=f72987eddba8e99555da0940af6a7163"
       )
@@ -193,7 +196,14 @@ export default {
           )
             .then(response => response.json())
             .then(json => {
-              this.queriedCity = json.daily;
+              this.queriedCity = json.daily;     
+              this.today =(moment(new Date()).format('MMMM Do YYYY, h:mm:ss a')) 
+              this.tomorrow =(moment(new Date()).add(1, 'days').format('dddd'));       // Tomorrow at 12:40 PM) 
+              this.two_days =(moment(new Date()).add(2, 'days').format('dddd')) 
+              this.three_days =(moment(new Date()).add(3, 'days').format('dddd')) 
+              this.four_days =(moment(new Date()).add(4, 'days').format('dddd')) 
+              this.five_days =(moment(new Date()).add(5, 'days').format('dddd')) 
+              this.six_days =(moment(new Date()).add(6, 'days').format('dddd')) 
               this.degrees = json.daily[0].wind_deg;
               this.position = "";
               if (this.degrees < 90) {
@@ -220,8 +230,14 @@ export default {
               if (this.degrees == 270) {
                 this.position = "W";
               }
-              // console.log(json.daily[0].wind_deg);
-              // console.log(json.daily); // weekly report
+              console.log(json.daily[1].dt_txt);
+              console.log(json.daily[2].dt);
+              console.log(json.daily[3].dt);
+              console.log(moment(json.daily[1].dt_txt).format("MMM Do YY")); // weekly report
+              console.log(moment(json.daily[2].dt_txt).format("MMM Do YY")); // weekly report
+              console.log(moment(json.daily[3].dt_txt).format("MMM Do YY")); // weekly report
+              console.log(moment(json.daily[4].dt_txt).format("MMM Do YY")); // weekly report
+              console.log(moment(json.daily[5].dt_txt).format("MMM Do YY")); // weekly report
             });
         })
         .catch(err => alert(err, "Invalid information passed in!"));
@@ -236,12 +252,24 @@ h3 {
   margin: 40px 0 0;
 }
 
+.footer-hi-temp{
+  font-size: 26px;
+  font-style: italic;
+  opacity: 0.6
+}
+
+.footer-lo-temp{
+  font-size: 20px;
+  font-style: italic;
+  opacity: 0.4
+}
+
 .card-container {
-  padding: 8px;
+  
 }
 
 .card {
-  margin: 4px;
+  margin: 5px;
 }
 
 .app-container {
@@ -249,20 +277,29 @@ h3 {
 }
 
 .card {
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  padding: 5px;
+  border-radius: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: none;
+  width: 100%;
+  background-color: rgba(80, 133, 165,0.6);
 }
 
-.weather-card .card-body {
-  background-color: rgba(255, 255, 255, 0.3);
+.weather-card {
+  
+}
+
+
+.weather-card .card-header,
+.weather-card .card-body,
+.weather-card .card-footer {
+  background-color: rgba(80, 133, 165,0.6);
 }
 
 .weather-card .card-header {
   height: 130px;
   border: none;
+  text-transform: capitalize;
 }
 
 .weather-card .card-footer {
@@ -280,12 +317,12 @@ h3 {
 
 .hi-temp{
   font-size: 30px;
-  color: rgba(255, 0, 0,0.8);
+  opacity: 0.6;
 }
 
 .lo-temp{
   font-size: 24px;
-  color: rgba(0, 0, 255,0.8);
+  opacity: 0.4;
 }
 
 .weather-desc{

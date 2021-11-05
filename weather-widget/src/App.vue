@@ -15,7 +15,7 @@ export default {
 
 <style>
 body{
-  background-color: #1380A7;
+  background-color: #5AB8EB;
 }
 
 #app {
