@@ -1,5 +1,6 @@
 <template>
-  <Widget/>
+  <router-view/>
+  <!-- <Widget/> -->
 </template>
 
 <script>
