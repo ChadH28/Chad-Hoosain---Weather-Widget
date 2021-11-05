@@ -183,7 +183,8 @@ export default {
       // Weather icons /
       // next 5 days weather forecast : high and lows and icons
       fetch(
-        "http://api.openweathermap.org/data/2.5/forecast?q=Cape Town&units=metric&APPID=f72987eddba8e99555da0940af6a7163"
+        "http://api.openweathermap.org/data/2.5/forecast?q=Cape Town&units=metric&APPID=f72987eddba8e99555da0940af6a7163",
+        {mode: "cors"}
       )
         .then(response => response.json())
         .then(json => {
@@ -192,7 +193,8 @@ export default {
           const latValue = json.city.coord.lat;
           const lonValue = json.city.coord.lon;
           fetch(
-            `https://api.openweathermap.org/data/2.5/onecall?lat=${latValue}&lon=${lonValue}&units=metric&exclude=minutely,hourly,current&appid=f72987eddba8e99555da0940af6a7163`
+            `https://api.openweathermap.org/data/2.5/onecall?lat=${latValue}&lon=${lonValue}&units=metric&exclude=minutely,hourly,current&appid=f72987eddba8e99555da0940af6a7163`,
+              {mode: "cors"}
           )
             .then(response => response.json())
             .then(json => {
