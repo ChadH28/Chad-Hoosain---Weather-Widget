@@ -4,12 +4,12 @@
 </template>
 
 <script>
-import Widget from './components/Widget.vue'
+// import Widget from './components/Widget.vue'
 
 export default {
   name: 'App',
   components: {
-    Widget
+    // Widget
   }
 }
 </script>
